@@ -16,20 +16,20 @@ function lower(){
     setText(newText)
 }
 function capital(){
-    let newText = text.toUpperCase()
+    let newText = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
     setText(newText)
 }
 function remove(){
-    let newText = text.toUpperCase()
+    let newText = text.replace(/\s+/g, ' ')
     setText(newText)
 }
 function reset(){
-    let newText = text.toUpperCase()
-    setText(newText)
+    setText("")
 }
 function copy(){
-    let newText = text.toUpperCase()
-    setText(newText)
+    let copyTxt = document.querySelector("#inputBox")
+    copyTxt.select();
+  navigator.clipboard.writeText(copyTxt.value)
 }
 
   return (
