@@ -20,7 +20,7 @@ function App() {
     <div className="App">
      
 <Navbar title="MyTextApp" mode={mode} toggleMode={toggleMode}/>
-<Text/>
+<Text mode={mode}/>
     </div>
   );
 }

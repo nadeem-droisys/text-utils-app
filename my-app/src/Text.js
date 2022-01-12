@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-export default function Text() {
+export default function Text(props) {
     
 const [text, setText] = useState("")
 function inputHandler(event){
@@ -34,7 +34,7 @@ function copy(){
 
   return (
     <div>
-      <div className="my-3">
+      <div className={`my-3 text-${props.mode==="light"?"dark":"light"} `}>
         <h1>Welcome to MyTextUtilsApp</h1>
       </div>
       <div className="container my-5">
@@ -61,7 +61,7 @@ function copy(){
         <button id="resetBtn" className="btn-success mx-2 my-2" onClick={reset}>
           to Reset
         </button>
-        <div>you have typed {text.split(" ").length-1} words and {text.length} characters</div>
+        <div className={`text-${props.mode==="light"?"dark":"light"}`}>you have typed {text.split(" ").length-1} words and {text.length} characters</div>
       </div>
     </div>
   );
