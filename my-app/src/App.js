@@ -3,6 +3,7 @@ import './App.css';
 import react, {useState} from "react"
 import Text from './Text';
 import Navbar from './Navbar';
+import Calculator from './Calculator';
 function App() {
   const [mode, setMode] = useState('light'); 
 
@@ -21,6 +22,7 @@ function App() {
      
 <Navbar title="MyTextApp" mode={mode} toggleMode={toggleMode}/>
 <Text mode={mode}/>
+<Calculator/>
     </div>
   );
 }

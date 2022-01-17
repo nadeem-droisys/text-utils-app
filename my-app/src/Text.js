@@ -20,7 +20,7 @@ function capital(){
     setText(newText)
 }
 function remove(){
-    let newText = text.replace(/\s+/g, ' ')
+    let newText = text.replace(/\s+/g, ' ').trim()
     setText(newText)
 }
 function reset(){
